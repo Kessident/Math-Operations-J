@@ -4,9 +4,8 @@ import java.util.Scanner;
 
 public class Main {
 
-    private static Scanner scan = new Scanner(System.in);
-    
     private static double getUserNumber(){
+        Scanner scan = new Scanner(System.in);
         double userNumber = 1;
         try {
             System.out.print("Please enter a number: ");
@@ -17,12 +16,14 @@ public class Main {
         }
         return userNumber;
     }
+    
     private static void showResults(double sum, double difference, double multiplication, double remainder, double num1, double num2) {
         System.out.println("The sum of " + num1 + " and " + num2 + " is: " + sum + "\n" +
                 "The difference between " + num1 + " and " + num2 + " is: " + difference + "\n" +
                 num1 + " multiplied by " + num2 + " is: " + multiplication + "\n" +
                 "The remainder of " + num1 + " divided by " + num2 + " is: " + remainder);
     }
+
     public static void main(String[] args) {
         System.out.println("Please enter two numbers");
         double operand1 = getUserNumber();
